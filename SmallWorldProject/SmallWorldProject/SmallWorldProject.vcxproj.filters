@@ -1,0 +1,368 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Powers">
+      <UniqueIdentifier>{6b83e57f-5e0c-4fe8-a04c-355e9674f9b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Races">
+      <UniqueIdentifier>{2cb3ae78-1466-41fd-8695-3ab5326c985a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Game Pieces">
+      <UniqueIdentifier>{53734add-be59-4d0a-b4bd-6bdf6ab98254}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Game Pieces">
+      <UniqueIdentifier>{88e5b101-bfee-40d7-9268-732fa12b4502}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Races">
+      <UniqueIdentifier>{86f50c73-93ca-41ce-9de3-24ded02f235b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Powers">
+      <UniqueIdentifier>{fec4c468-060a-4f95-b0bb-c451aae89839}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Region.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Edge.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MapLoader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ReinforcementDie.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VictoryCoin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Alchemist.h">
+      <Filter>Header Files\Powers</Filter>
+    </ClInclude>
+    <ClInclude Include="Amazon.h">
+      <Filter>Header Files\Races</Filter>
+    </ClInclude>
+    <ClInclude Include="Berserk.h">
+      <Filter>Header Files\Powers</Filter>
+    </ClInclude>
+    <ClInclude Include="Bivouacking.h">
+      <Filter>Header Files\Powers</Filter>
+    </ClInclude>
+    <ClInclude Include="Commando.h">
+      <Filter>Header Files\Powers</Filter>
+    </ClInclude>
+    <ClInclude Include="Diplomat.h">
+      <Filter>Header Files\Powers</Filter>
+    </ClInclude>
+    <ClInclude Include="DragonMaster.h">
+      <Filter>Header Files\Powers</Filter>
+    </ClInclude>
+    <ClInclude Include="Dragon.h">
+      <Filter>Header Files\Game Pieces</Filter>
+    </ClInclude>
+    <ClInclude Include="Dwarf.h">
+      <Filter>Header Files\Races</Filter>
+    </ClInclude>
+    <ClInclude Include="Elf.h">
+      <Filter>Header Files\Races</Filter>
+    </ClInclude>
+    <ClInclude Include="Encampment.h">
+      <Filter>Header Files\Game Pieces</Filter>
+    </ClInclude>
+    <ClInclude Include="Flying.h">
+      <Filter>Header Files\Powers</Filter>
+    </ClInclude>
+    <ClInclude Include="Forest.h">
+      <Filter>Header Files\Powers</Filter>
+    </ClInclude>
+    <ClInclude Include="Fortified.h">
+      <Filter>Header Files\Powers</Filter>
+    </ClInclude>
+    <ClInclude Include="Fortress.h">
+      <Filter>Header Files\Game Pieces</Filter>
+    </ClInclude>
+    <ClInclude Include="GamePiece.h">
+      <Filter>Header Files\Game Pieces</Filter>
+    </ClInclude>
+    <ClInclude Include="Ghoul.h">
+      <Filter>Header Files\Races</Filter>
+    </ClInclude>
+    <ClInclude Include="Giant.h">
+      <Filter>Header Files\Races</Filter>
+    </ClInclude>
+    <ClInclude Include="Halfling.h">
+      <Filter>Header Files\Races</Filter>
+    </ClInclude>
+    <ClInclude Include="Hero.h">
+      <Filter>Header Files\Game Pieces</Filter>
+    </ClInclude>
+    <ClInclude Include="Heroic.h">
+      <Filter>Header Files\Powers</Filter>
+    </ClInclude>
+    <ClInclude Include="Hill.h">
+      <Filter>Header Files\Powers</Filter>
+    </ClInclude>
+    <ClInclude Include="HoleInTheGround.h">
+      <Filter>Header Files\Game Pieces</Filter>
+    </ClInclude>
+    <ClInclude Include="Human.h">
+      <Filter>Header Files\Races</Filter>
+    </ClInclude>
+    <ClInclude Include="Merchant.h">
+      <Filter>Header Files\Powers</Filter>
+    </ClInclude>
+    <ClInclude Include="Mountain.h">
+      <Filter>Header Files\Game Pieces</Filter>
+    </ClInclude>
+    <ClInclude Include="TrollLair.h">
+      <Filter>Header Files\Game Pieces</Filter>
+    </ClInclude>
+    <ClInclude Include="Mounted.h">
+      <Filter>Header Files\Powers</Filter>
+    </ClInclude>
+    <ClInclude Include="Orc.h">
+      <Filter>Header Files\Races</Filter>
+    </ClInclude>
+    <ClInclude Include="Pillaging.h">
+      <Filter>Header Files\Powers</Filter>
+    </ClInclude>
+    <ClInclude Include="RaceBanner.h">
+      <Filter>Header Files\Races</Filter>
+    </ClInclude>
+    <ClInclude Include="Ratmen.h">
+      <Filter>Header Files\Races</Filter>
+    </ClInclude>
+    <ClInclude Include="Seafaring.h">
+      <Filter>Header Files\Powers</Filter>
+    </ClInclude>
+    <ClInclude Include="Skeleton.h">
+      <Filter>Header Files\Races</Filter>
+    </ClInclude>
+    <ClInclude Include="Sorcerer.h">
+      <Filter>Header Files\Races</Filter>
+    </ClInclude>
+    <ClInclude Include="SpecialPower.h">
+      <Filter>Header Files\Powers</Filter>
+    </ClInclude>
+    <ClInclude Include="Spirit.h">
+      <Filter>Header Files\Powers</Filter>
+    </ClInclude>
+    <ClInclude Include="Stout.h">
+      <Filter>Header Files\Powers</Filter>
+    </ClInclude>
+    <ClInclude Include="Swamp.h">
+      <Filter>Header Files\Powers</Filter>
+    </ClInclude>
+    <ClInclude Include="Triton.h">
+      <Filter>Header Files\Races</Filter>
+    </ClInclude>
+    <ClInclude Include="Troll.h">
+      <Filter>Header Files\Races</Filter>
+    </ClInclude>
+    <ClInclude Include="Wizard.h">
+      <Filter>Header Files\Races</Filter>
+    </ClInclude>
+    <ClInclude Include="Wealthy.h">
+      <Filter>Header Files\Powers</Filter>
+    </ClInclude>
+    <ClInclude Include="Underworld.h">
+      <Filter>Header Files\Powers</Filter>
+    </ClInclude>
+    <ClInclude Include="Races.h">
+      <Filter>Header Files\Races</Filter>
+    </ClInclude>
+    <ClInclude Include="SpecialPowers.h">
+      <Filter>Header Files\Powers</Filter>
+    </ClInclude>
+    <ClInclude Include="GamePieces.h">
+      <Filter>Header Files\Game Pieces</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Region.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Edge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Drivers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MapLoader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ReinforcementDie.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VictoryCoin.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Alchemist.cpp">
+      <Filter>Source Files\Powers</Filter>
+    </ClCompile>
+    <ClCompile Include="Amazon.cpp">
+      <Filter>Source Files\Races</Filter>
+    </ClCompile>
+    <ClCompile Include="Berserk.cpp">
+      <Filter>Source Files\Powers</Filter>
+    </ClCompile>
+    <ClCompile Include="Bivouacking.cpp">
+      <Filter>Source Files\Powers</Filter>
+    </ClCompile>
+    <ClCompile Include="Commando.cpp">
+      <Filter>Source Files\Powers</Filter>
+    </ClCompile>
+    <ClCompile Include="Diplomat.cpp">
+      <Filter>Source Files\Powers</Filter>
+    </ClCompile>
+    <ClCompile Include="DragonMaster.cpp">
+      <Filter>Source Files\Powers</Filter>
+    </ClCompile>
+    <ClCompile Include="Dragon.cpp">
+      <Filter>Source Files\Game Pieces</Filter>
+    </ClCompile>
+    <ClCompile Include="Dwarf.cpp">
+      <Filter>Source Files\Races</Filter>
+    </ClCompile>
+    <ClCompile Include="Elf.cpp">
+      <Filter>Source Files\Races</Filter>
+    </ClCompile>
+    <ClCompile Include="Encampment.cpp">
+      <Filter>Source Files\Game Pieces</Filter>
+    </ClCompile>
+    <ClCompile Include="Ghoul.cpp">
+      <Filter>Source Files\Races</Filter>
+    </ClCompile>
+    <ClCompile Include="Fortified.cpp">
+      <Filter>Source Files\Powers</Filter>
+    </ClCompile>
+    <ClCompile Include="Flying.cpp">
+      <Filter>Source Files\Powers</Filter>
+    </ClCompile>
+    <ClCompile Include="Forest.cpp">
+      <Filter>Source Files\Powers</Filter>
+    </ClCompile>
+    <ClCompile Include="Fortress.cpp">
+      <Filter>Source Files\Game Pieces</Filter>
+    </ClCompile>
+    <ClCompile Include="Giant.cpp">
+      <Filter>Source Files\Races</Filter>
+    </ClCompile>
+    <ClCompile Include="Halfling.cpp">
+      <Filter>Source Files\Races</Filter>
+    </ClCompile>
+    <ClCompile Include="Hero.cpp">
+      <Filter>Source Files\Game Pieces</Filter>
+    </ClCompile>
+    <ClCompile Include="Heroic.cpp">
+      <Filter>Source Files\Powers</Filter>
+    </ClCompile>
+    <ClCompile Include="Human.cpp">
+      <Filter>Source Files\Races</Filter>
+    </ClCompile>
+    <ClCompile Include="Hill.cpp">
+      <Filter>Source Files\Powers</Filter>
+    </ClCompile>
+    <ClCompile Include="HoleInTheGround.cpp">
+      <Filter>Source Files\Game Pieces</Filter>
+    </ClCompile>
+    <ClCompile Include="Merchant.cpp">
+      <Filter>Source Files\Powers</Filter>
+    </ClCompile>
+    <ClCompile Include="Mountain.cpp">
+      <Filter>Source Files\Game Pieces</Filter>
+    </ClCompile>
+    <ClCompile Include="Mounted.cpp">
+      <Filter>Source Files\Powers</Filter>
+    </ClCompile>
+    <ClCompile Include="Orc.cpp">
+      <Filter>Source Files\Races</Filter>
+    </ClCompile>
+    <ClCompile Include="Pillaging.cpp">
+      <Filter>Source Files\Powers</Filter>
+    </ClCompile>
+    <ClCompile Include="Ratmen.cpp">
+      <Filter>Source Files\Races</Filter>
+    </ClCompile>
+    <ClCompile Include="Seafaring.cpp">
+      <Filter>Source Files\Powers</Filter>
+    </ClCompile>
+    <ClCompile Include="Skeleton.cpp">
+      <Filter>Source Files\Races</Filter>
+    </ClCompile>
+    <ClCompile Include="Sorcerer.cpp">
+      <Filter>Source Files\Races</Filter>
+    </ClCompile>
+    <ClCompile Include="Spirit.cpp">
+      <Filter>Source Files\Powers</Filter>
+    </ClCompile>
+    <ClCompile Include="Stout.cpp">
+      <Filter>Source Files\Powers</Filter>
+    </ClCompile>
+    <ClCompile Include="Swamp.cpp">
+      <Filter>Source Files\Powers</Filter>
+    </ClCompile>
+    <ClCompile Include="Triton.cpp">
+      <Filter>Source Files\Races</Filter>
+    </ClCompile>
+    <ClCompile Include="Troll.cpp">
+      <Filter>Source Files\Races</Filter>
+    </ClCompile>
+    <ClCompile Include="TrollLair.cpp">
+      <Filter>Source Files\Game Pieces</Filter>
+    </ClCompile>
+    <ClCompile Include="Underworld.cpp">
+      <Filter>Source Files\Powers</Filter>
+    </ClCompile>
+    <ClCompile Include="Wealthy.cpp">
+      <Filter>Source Files\Powers</Filter>
+    </ClCompile>
+    <ClCompile Include="Wizard.cpp">
+      <Filter>Source Files\Races</Filter>
+    </ClCompile>
+    <ClCompile Include="SpecialPower.cpp">
+      <Filter>Source Files\Powers</Filter>
+    </ClCompile>
+    <ClCompile Include="RaceBanner.cpp">
+      <Filter>Source Files\Races</Filter>
+    </ClCompile>
+    <ClCompile Include="GamePiece.cpp">
+      <Filter>Source Files\Game Pieces</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="2Players.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="3Players.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="4Players.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Alchemist.h" />
+    <ClInclude Include="Amazon.h" />
+    <ClInclude Include="Berserk.h" />
+    <ClInclude Include="Bivouacking.h" />
+    <ClInclude Include="Commando.h" />
+    <ClInclude Include="Diplomat.h" />
+    <ClInclude Include="Dragon.h" />
+    <ClInclude Include="DragonMaster.h" />
+    <ClInclude Include="Dwarf.h" />
+    <ClInclude Include="Edge.h" />
+    <ClInclude Include="Elf.h" />
+    <ClInclude Include="Encampment.h" />
+    <ClInclude Include="Flying.h" />
+    <ClInclude Include="Forest.h" />
+    <ClInclude Include="Fortified.h" />
+    <ClInclude Include="Fortress.h" />
+    <ClInclude Include="GamePiece.h" />
+    <ClInclude Include="GamePieces.h" />
+    <ClInclude Include="Ghoul.h" />
+    <ClInclude Include="Giant.h" />
+    <ClInclude Include="Halfling.h" />
+    <ClInclude Include="Hero.h" />
+    <ClInclude Include="Heroic.h" />
+    <ClInclude Include="Hill.h" />
+    <ClInclude Include="HoleInTheGround.h" />
+    <ClInclude Include="Human.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="MapLoader.h" />
+    <ClInclude Include="Merchant.h" />
+    <ClInclude Include="Mountain.h" />
+    <ClInclude Include="Mounted.h" />
+    <ClInclude Include="Orc.h" />
+    <ClInclude Include="Pillaging.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="RaceBanner.h" />
+    <ClInclude Include="Races.h" />
+    <ClInclude Include="Ratmen.h" />
+    <ClInclude Include="Region.h" />
+    <ClInclude Include="ReinforcementDie.h" />
+    <ClInclude Include="Seafaring.h" />
+    <ClInclude Include="Skeleton.h" />
+    <ClInclude Include="Sorcerer.h" />
+    <ClInclude Include="SpecialPower.h" />
+    <ClInclude Include="SpecialPowers.h" />
+    <ClInclude Include="Spirit.h" />
+    <ClInclude Include="Stout.h" />
+    <ClInclude Include="Swamp.h" />
+    <ClInclude Include="Triton.h" />
+    <ClInclude Include="Troll.h" />
+    <ClInclude Include="TrollLair.h" />
+    <ClInclude Include="Underworld.h" />
+    <ClInclude Include="VictoryCoin.h" />
+    <ClInclude Include="Wealthy.h" />
+    <ClInclude Include="Wizard.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Alchemist.cpp" />
+    <ClCompile Include="Amazon.cpp" />
+    <ClCompile Include="Berserk.cpp" />
+    <ClCompile Include="Bivouacking.cpp" />
+    <ClCompile Include="Commando.cpp" />
+    <ClCompile Include="Diplomat.cpp" />
+    <ClCompile Include="Dragon.cpp" />
+    <ClCompile Include="DragonMaster.cpp" />
+    <ClCompile Include="Drivers.cpp" />
+    <ClCompile Include="Dwarf.cpp" />
+    <ClCompile Include="Edge.cpp" />
+    <ClCompile Include="Elf.cpp" />
+    <ClCompile Include="Encampment.cpp" />
+    <ClCompile Include="Flying.cpp" />
+    <ClCompile Include="Forest.cpp" />
+    <ClCompile Include="Fortified.cpp" />
+    <ClCompile Include="Fortress.cpp" />
+    <ClCompile Include="GamePiece.cpp" />
+    <ClCompile Include="Ghoul.cpp" />
+    <ClCompile Include="Giant.cpp" />
+    <ClCompile Include="Halfling.cpp" />
+    <ClCompile Include="Hero.cpp" />
+    <ClCompile Include="Heroic.cpp" />
+    <ClCompile Include="Hill.cpp" />
+    <ClCompile Include="HoleInTheGround.cpp" />
+    <ClCompile Include="Human.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="MapLoader.cpp" />
+    <ClCompile Include="Merchant.cpp" />
+    <ClCompile Include="Mountain.cpp" />
+    <ClCompile Include="Mounted.cpp" />
+    <ClCompile Include="Orc.cpp" />
+    <ClCompile Include="Pillaging.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="RaceBanner.cpp" />
+    <ClCompile Include="Ratmen.cpp" />
+    <ClCompile Include="Region.cpp" />
+    <ClCompile Include="ReinforcementDie.cpp" />
+    <ClCompile Include="Seafaring.cpp" />
+    <ClCompile Include="Skeleton.cpp" />
+    <ClCompile Include="Sorcerer.cpp" />
+    <ClCompile Include="SpecialPower.cpp" />
+    <ClCompile Include="Spirit.cpp" />
+    <ClCompile Include="Stout.cpp" />
+    <ClCompile Include="Swamp.cpp" />
+    <ClCompile Include="Triton.cpp" />
+    <ClCompile Include="Troll.cpp" />
+    <ClCompile Include="TrollLair.cpp" />
+    <ClCompile Include="Underworld.cpp" />
+    <ClCompile Include="VictoryCoin.cpp" />
+    <ClCompile Include="Wealthy.cpp" />
+    <ClCompile Include="Wizard.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="2Players.txt" />
+    <Text Include="3Players.txt" />
+    <Text Include="4Players.txt" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{063E006B-965A-43A6-A5D9-0BB973559A68}</ProjectGuid>
+    <RootNamespace>SmallWorldProject</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
