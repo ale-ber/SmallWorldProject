@@ -5,6 +5,7 @@
 #include "Races.h"
 #include "SpecialPowers.h"
 #include "GamePieces.h"
+#include <time.h>
 #include <iostream>
 #include <string>
 
@@ -37,7 +38,7 @@ int getNumberOfAllowedTurns(int players)
 		return 8;
 }
 
-//method used for shuffling the races in the stack
+//method used for creating the Race badges
 void populateRacesVector()
 {
 	RaceBanner *amazon = new Amazon();
@@ -70,7 +71,7 @@ void populateRacesVector()
 	races.push_back(wizard);
 }
 
-//method used for shuffling the special powers in the stack
+//method used for creating the Special Powers badges
 void populateSpecialPowersVector()
 {
 	SpecialPower *alchemist = new Alchemist();
@@ -115,6 +116,61 @@ void populateSpecialPowersVector()
 	specialPowers.push_back(wealthy);
 }
 
+//method used for shuffling the Races vector
+void shuffleRacesVector()
+{
+	//the shuffle index
+	int index;
+
+	//There are 14 races in the game, so the loop executes 14 times
+	for (int i = 0; i < 14; i++)
+	{
+		srand(time(NULL));
+		index = rand() % races.size();
+		shuffledRaces.push_back(races[index]);
+		races.erase(races.begin() + index);
+	}
+}
+
+//method used for shuffling the Special Powers vector
+void shufflePowersVector()
+{
+	//the shuffle index
+	int index;
+
+	//There are 20 powers in the game, so the loop executes 20 times
+	for (int i = 0; i < 20; i++)
+	{
+		srand(time(NULL));
+		index = rand() % specialPowers.size();
+		shuffledSpecialPowers.push_back(specialPowers[index]);
+		specialPowers.erase(specialPowers.begin() + index);
+	}
+}
+
+//Adds another race to the list of 6 visible badges
+void getNextAvailableRace()
+{
+	availableRaceChoices.push_back(shuffledRaces[0]);
+	shuffledRaces.erase(shuffledRaces.begin() + 0);
+}
+
+//Adds another special power to the list of 6 visible badges
+void getNextAvailablePower()
+{
+	availablePowerChoices.push_back(shuffledSpecialPowers[0]);
+	shuffledSpecialPowers.erase(shuffledSpecialPowers.begin() + 0);
+}
+
+//returns the next player to have their turn
+int getNextPlayer(int currentPlayer, int maxPlayers)
+{
+	if (currentPlayer == maxPlayers)
+		return 1;
+	else
+		return (currentPlayer + 1);
+}
+
 /*
 The main method that implements all the drivers
 
@@ -125,7 +181,7 @@ int main()
 {
 	std::string fileName;
 	int numOfPlayers;
-	
+	int startingPlayer;
 
 	/**
 	PART 1 HERE
@@ -152,27 +208,22 @@ int main()
 	//create all the players
 	createPlayers(numOfPlayers);
 
-	//try opening the file containing the information for our test map
+	//try opening the file containing the information for our map. If the map is invalid, do not start game
 	MapLoader mapLoader(fileName);
 	try 
 	{
 		Map gameMap = mapLoader.generateMap(); 
-		//once the map is generated, output all the regions and borders in our map
-		/*for (int j = 0; j < gameMap.numberofRegions(); j++)
-		{
-			std::cout << "The region's number is " << gameMap.getRegion(j).getRegionNumber() << " and it's type is " << gameMap.getRegion(j).getRegionType() << "and bonus: " << gameMap.getRegion(j).getRegionBonus() << std::endl;
-		}
-		for (int j = 0; j < gameMap.numberofEdges(); j++)
-		{
-			std::cout << "The region's number is " << gameMap.getEdge(j).getBorder1() << " and it borders region# " << gameMap.getEdge(j).getBorder2() << std::endl;
-		}*/
 	}
 	catch (char * str)
 	{
 		std::cout << str << std::endl;
+		//system("pause");
+		//return 1;
 	}
 
+	//Time to start the game!
 	int currentTurn = 1;
+	int currentPlayer;
 
 	/**
 	PART 2 HERE
@@ -180,10 +231,51 @@ int main()
 	*/
 	std::cout << "Part 2 outputs here:" << std::endl;
 	for (int i = 0; i < numOfPlayers; i++)
-		std::cout << "Player number: " << players[i].getPlayerNumber() << " successfully created." << std::endl;
-	//populateRacesVector();
-	//std::cout << "Works: " << races[5]->getRaceTokens() << std::endl;
+		std::cout << "Player number: " << players[i].getPlayerNumber() << " successfully created with " << players[i].getVictoryCoins() << " coins." << std::endl;
+	
+	//get the stacks of badges ready
+	populateRacesVector();
+	populateSpecialPowersVector();
 
+	//shuffle the stacks of Race and Special Power badges
+	shuffleRacesVector();
+	shufflePowersVector();
+
+	//initialize the first six choices of Race/Special Power combos
+	for (int i = 0; i < 6; i++) {
+		getNextAvailableRace();
+		getNextAvailablePower();
+	}
+
+	//determine the starting player
+	std::cout << "The player with the pointiest ears starts first. Which player is that? " << std::endl;
+	std::cin >> startingPlayer;
+	while (std::cin.fail() || startingPlayer < 1 || startingPlayer > numOfPlayers) {
+		std::cout << "You did not enter a valid player. Please enter a valid player number to begin:" << std::endl;
+		std::cin.clear();
+		std::cin.ignore(256, '\n');
+		std::cin >> startingPlayer;
+	}
+	currentPlayer = startingPlayer;
+
+	//Everything is set up, start game
+
+	/* MAIN GAME LOOP */
+	while (currentTurn <= numberOfTurns)
+	{
+		
+		//if it is the first turn, players must choose a race and power combo
+		if (currentTurn == 1)
+		{
+			std::cout << "Player #" << currentPlayer << ", please choose a race and power combo: " << std::endl;
+			players[currentPlayer-1].picks_race("Test race");
+		}
+
+
+		//check if it's the beginning of a new turn
+		if (currentPlayer == startingPlayer)
+			currentTurn++;
+	}
 
 	system("pause");
 

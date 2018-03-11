@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 
 /*
 Special Power class
@@ -17,6 +18,8 @@ public:
 	bool isActive();
 	//sets the power to be inactive
 	void setInactive();
+	//returns the type of the power
+	virtual std::string getPowerType() = 0;
 protected:
 	//every derived class will set the number of race tokens given to the player when they choose that special power
 	int raceTokens;

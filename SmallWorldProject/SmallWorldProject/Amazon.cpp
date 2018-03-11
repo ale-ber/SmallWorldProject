@@ -1,5 +1,6 @@
 #include "RaceBanner.h"
 #include "Amazon.h"
+#include <string>
 
 Amazon::Amazon()
 {

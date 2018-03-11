@@ -1,4 +1,5 @@
 #pragma once
+#include <string>
 
 /*
 Race Banner class
@@ -16,6 +17,8 @@ class RaceBanner {
 		bool isInDecline();
 		//sets the race to be in decline
 		void setInDecline();
+		//returns the type of the race
+		virtual std::string getRaceType() = 0;
 	protected:
 		//every derived class will set the number of race tokens given to the player when they choose that race
 		int raceTokens;
