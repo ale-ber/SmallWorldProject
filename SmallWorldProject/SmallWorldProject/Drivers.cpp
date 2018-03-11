@@ -247,6 +247,14 @@ int main()
 		getNextAvailablePower();
 	}
 
+	/**
+	PART 3 HERE
+	Outputs all of the available Race/Power combos to choose from
+	*/
+	std::cout << "Part 3 outputs here:" << std::endl;
+	for (int i = 0; i < availableRaceChoices.size(); i++)
+		std::cout << "Choice #" << (i+1) << " is a " << availableRaceChoices[i]->getRaceType() << " and " << availablePowerChoices[i]->getPowerType() << " combo." << std::endl;
+
 	//determine the starting player
 	std::cout << "The player with the pointiest ears starts first. Which player is that? " << std::endl;
 	std::cin >> startingPlayer;
@@ -263,6 +271,7 @@ int main()
 	/* MAIN GAME LOOP */
 	while (currentTurn <= numberOfTurns)
 	{
+		std::cout << "Starting turn #" << currentTurn << " out of " << numberOfTurns << " total turns." << std::endl;
 		
 		//if it is the first turn, players must choose a race and power combo
 		if (currentTurn == 1)
@@ -271,10 +280,34 @@ int main()
 			players[currentPlayer-1].picks_race("Test race");
 		}
 
+		std::cout << "Player #" << currentPlayer << ", you have two choices. Enter 1 to conquer some regions or 2 to set your race in decline and score for your turn:" << std::endl;
+		//verify the user input
+		int choice;
+		std::cin >> choice;
+		while (std::cin.fail() || (choice != 1 && choice != 2))
+		{
+			std::cout << "You did not enter a valid integer between 1 and 2. Please enter a valid integer to continue the game:" << std::endl;
+			std::cin.clear();
+			std::cin.ignore(256, '\n');
+			std::cin >> choice;
+		}
 
-		//check if it's the beginning of a new turn
+		//depending on the input, call the appropriate methods
+		if (choice == 1)
+			players[currentPlayer - 1].conquers();
+		else
+			players[currentPlayer - 1].scores();
+
+		//end the turn
+		std::cout << "End of Player# " << currentPlayer << " turn." << std::endl;
+
+		//check if the next loop is the beginning of a new turn
 		if (currentPlayer == startingPlayer)
 			currentTurn++;
+
+		//hand the next turn over to the next player in line
+		currentPlayer = getNextPlayer(currentPlayer, numOfPlayers);
+		std::cout << "Beggining of Player# " << currentPlayer << " turn." << std::endl;
 	}
 
 	system("pause");
