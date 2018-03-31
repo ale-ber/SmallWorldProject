@@ -5,7 +5,6 @@ Player::Player(int in_playerNumber):
 	m_playerNumber(in_playerNumber)
 {
 	victoryCoins = 5;
-	raceOwned = "none";
 }
 
 Player::~Player()
@@ -35,22 +34,32 @@ ReinforcementDie Player::getReinforcementDie()
 
 std::string Player::getRaceOwned()
 {
-	return raceOwned;
+	return raceOwned->getRaceType();
 }
 
-void Player::setRaceOwned(std::string raceChosen)
+void Player::setRaceOwned(RaceBanner* raceChosen)
 {
 	raceOwned = raceChosen;
 }
 
 std::string Player::getPowerOwned()
 {
-	return specialPowerOwned;
+	return specialPowerOwned->getPowerType();
 }
 
-void Player::setPowerOwned(std::string powerChosen)
+void Player::setPowerOwned(SpecialPower* powerChosen)
 {
 	specialPowerOwned = powerChosen;
+}
+
+int Player::getTotalConqueredRegions()
+{
+	return regionsConquered;
+}
+
+void Player::Update(int regionsConquered)
+{
+	this->regionsConquered = regionsConquered;
 }
 
 void Player::picks_race(std::string in_raceChosen)

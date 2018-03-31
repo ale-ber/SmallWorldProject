@@ -13,6 +13,8 @@ class RaceBanner {
 		virtual ~RaceBanner();
 		//returns the number of race tokens a race initially provides the player
 		int getRaceTokens();
+		//allows to subtract from the tokens available to the player when conquering regions
+		void setRaceTokens(int raceTokens);
 		//checks to see if the race is in decline
 		bool isInDecline();
 		//sets the race to be in decline

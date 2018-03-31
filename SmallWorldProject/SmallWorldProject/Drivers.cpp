@@ -171,6 +171,22 @@ int getNextPlayer(int currentPlayer, int maxPlayers)
 		return (currentPlayer + 1);
 }
 
+//prints out the bar graph of the players' dominations over the regions on the map
+void printGraph(int maxPlayers)
+{
+	std::cout << "Graph representing the percentage of the world currently being owned by each player:" << std::endl;
+	for (int i = 0; i < maxPlayers; i++)
+	{
+		int regionsOwned = players[i].getTotalConqueredRegions();
+		std::cout << "Player " << i + 1 << ": |";
+		while (regionsOwned != 0)
+		{
+			std::cout << "_";
+			regionsOwned--;
+		}
+	}
+}
+
 /*
 The main method that implements all the drivers
 
@@ -183,12 +199,8 @@ int main()
 	int numOfPlayers;
 	int startingPlayer;
 
-	/**
-	PART 1 HERE
-	Loads a map file depending on input from the user, and creates players depending on the number of players entered
-	*/
-	std::cout << "Part 1 outputs here:" << std::endl;
 
+	//Loads a map file depending on input from the user, and creates players depending on the number of players entered
 	std::cout << "Please entre the name of the map file: " << std::endl;
 	std::cin >> fileName;
 	
@@ -224,14 +236,6 @@ int main()
 	//Time to start the game!
 	int currentTurn = 1;
 	int currentPlayer;
-
-	/**
-	PART 2 HERE
-	Outputs all of the players created in order
-	*/
-	std::cout << "Part 2 outputs here:" << std::endl;
-	for (int i = 0; i < numOfPlayers; i++)
-		std::cout << "Player number: " << players[i].getPlayerNumber() << " successfully created with " << players[i].getVictoryCoins() << " coins." << std::endl;
 	
 	//get the stacks of badges ready
 	populateRacesVector();
@@ -247,11 +251,9 @@ int main()
 		getNextAvailablePower();
 	}
 
-	/**
-	PART 3 HERE
-	Outputs all of the available Race/Power combos to choose from
-	*/
-	std::cout << "Part 3 outputs here:" << std::endl;
+	
+	//Outputs all of the available Race/Power combos to choose from
+	std::cout << "Race and Special Powers badges are shuffled! Here are the available choices:" << std::endl;
 	for (int i = 0; i < availableRaceChoices.size(); i++)
 		std::cout << "Choice #" << (i+1) << " is a " << availableRaceChoices[i]->getRaceType() << " and " << availablePowerChoices[i]->getPowerType() << " combo." << std::endl;
 

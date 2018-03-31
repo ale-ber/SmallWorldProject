@@ -195,6 +195,9 @@
     <ClInclude Include="GamePieces.h">
       <Filter>Header Files\Game Pieces</Filter>
     </ClInclude>
+    <ClInclude Include="GameStatsObserver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Region.cpp">

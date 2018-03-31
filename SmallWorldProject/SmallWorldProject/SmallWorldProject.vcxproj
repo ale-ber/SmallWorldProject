@@ -37,6 +37,7 @@
     <ClInclude Include="Fortress.h" />
     <ClInclude Include="GamePiece.h" />
     <ClInclude Include="GamePieces.h" />
+    <ClInclude Include="GameStatsObserver.h" />
     <ClInclude Include="Ghoul.h" />
     <ClInclude Include="Giant.h" />
     <ClInclude Include="Halfling.h" />

@@ -15,6 +15,11 @@ int RaceBanner::getRaceTokens()
 	return raceTokens;
 }
 
+void RaceBanner::setRaceTokens(int raceTokens)
+{
+	this->raceTokens = raceTokens;
+}
+
 bool RaceBanner::isInDecline()
 {
 	return inDecline;
