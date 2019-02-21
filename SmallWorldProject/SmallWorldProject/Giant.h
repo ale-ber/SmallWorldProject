@@ -6,7 +6,7 @@ public:
 	Giant();
 	~Giant();
 
-	//inherited pure virtual function from RaceBanner
+	//inherited pure virtual function from RaceBannerdd
 	std::string getRaceType()
 	{
 		return "Giant";
